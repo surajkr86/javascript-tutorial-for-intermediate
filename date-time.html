@@ -13,13 +13,20 @@
             <div class="col-md-12">
                 <h1>Welcome to date and time </h1>
                 <div class="display"></div>
-
-
+                <hr>
+                <h4>Displaying the Current Date</h4>
+                <div class="date"></div>
+                <hr>
+                <h4>Displaying the Current Time</h4>
+                <div class="time"></div>
+                <hr>
 
             </div>
         </div>
     </div>
     <script>
+        window.onload = function(){timer(newdate)};
+        
      var display = document.querySelector('.display');
      var newdate = new Date();
      var dayList = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
@@ -31,6 +38,39 @@
         }
         var ago = getDateAgo(newdate,1);
         display.innerHTML += ', '+ ago;
+
+         var date = document.querySelector('.date');
+         date.innerHTML = newdate.getDate()+'/'+ newdate.getMonth()+1+'/'+newdate.getFullYear();
+         //console.log(newdate.getMinutes());
+      
+         function timer(watch){
+            var watch = new Date();
+            var time = document.querySelector('.time');
+            var m = watch.getMinutes();
+            var h = watch.getHours();
+            var s = watch.getSeconds();
+                m = roateTime(m);
+                s = roateTime(s);
+           var ampm = "AM"
+           if(h>=12){
+             ampm = "PM"
+             h = h - 12;
+           } if(h==0){
+                h = 12;
+           }
+            time.innerHTML = h+":"+m+":"+s + ":" + ampm
+            setTimeout(function(){timer(newdate)}, 1000);
+         }
+         
+          function roateTime(i){
+              if(i<10){
+                i = "0" +i;
+              }
+              return i;
+          }
+          
+
+        
         
     </script>
 </body>
