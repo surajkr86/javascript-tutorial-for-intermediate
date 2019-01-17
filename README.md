@@ -1,1 +1,1 @@
-# javascript-tutorial-for-intermediate
+# Javascript-tutorial-for-Intermediate
