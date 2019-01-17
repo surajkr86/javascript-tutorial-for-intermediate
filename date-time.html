@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Welcome to date and time </h1>
+                <div class="display"></div>
+
+
+
+            </div>
+        </div>
+    </div>
+    <script>
+     var display = document.querySelector('.display');
+     var newdate = new Date();
+     var dayList = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+     var monthList = ['January','February','March','April','May','June','July','August','Setempber','October','November','December']
+     display.innerHTML = dayList[newdate.getDay()]+','+ monthList[newdate.getMonth()]+','+ newdate.getFullYear();
+        function getDateAgo(newdate,days){
+            newdate.setDate(newdate.getDate(),-days);
+            return newdate.getDate();
+        }
+        var ago = getDateAgo(newdate,1);
+        display.innerHTML += ', '+ ago;
+        
+    </script>
+</body>
+</html>
