@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Date.parse(string) returns milliseconds.</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
+</head>
+<body>
+   <div class="container">
+       <div class="row">
+           <div class="col-md-12">
+               <h4>Independent of input format, JavaScript will (by default) output dates in full text string format.</h4>
+               <div class="display"></div>
+               <br>
+               <h4>Date.parse(string) returns milliseconds.</h4>
+                <div class="milliseconds_div"></div>
+                <h4>Important: the UNIX timestamp reasons in seconds. JavaScript dates reason in milliseconds.</h4>
+                <div class="time"></div>
+           </div>
+       </div>
+   </div>
+   <script>
+   var display = document.querySelector('.display');
+   var milliseconds_div = document.querySelector('.milliseconds_div');
+   var time = document.querySelector('.time');
+   var newDate = new Date();
+   display.innerHTML = newDate
+   var today = newDate.getFullYear()+"/"+ newDate.getMonth()+1+"/"+newDate.getDay();
+   display.innerHTML += "<br/>"+today;
+   var nowUtc = new Date(newDate.getUTCFullYear(), newDate.getUTCMonth(), newDate.getUTCDate(),  newDate.getUTCHours(), newDate.getUTCMinutes(), newDate.getUTCSeconds());
+   console.log(nowUtc);
+   // Fri Jan 18 2019 10:27:43 GMT+0530 (India Standard Time)
+   // find the miliseconds 
+   var  miliseconds = Date.parse(today);
+        milliseconds_div.innerHTML = miliseconds;
+        var nfulldate = new Date(miliseconds);
+        time.innerHTML ="<br/>"+ nfulldate.toDateString();
+        console.log(nfulldate.toString());
+        // Fri Jan 18 2019 15:48:06 GMT+0530 (India Standard Time)
+        console.log(nfulldate.toDateString());
+        // Sat Jan 05 2019
+        //  ========== How to convert the local date to UTC date? ===========
+        console.log(nfulldate.toUTCString());
+        // Fri Jan 18 2019 15:48:06 GMT 
+        
+         
+       
+
+
+   </script> 
+</body>
+</html>
