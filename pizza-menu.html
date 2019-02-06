@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://bootswatch.com/4/cosmo/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor01">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+      
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6">
+            <form name="pizza_menu">
+                <fieldset>
+                    <legend>Order Pizza Here:</legend>
+                    <h5>What Type of Pizza Would You Like? </h5>
+                    <div class="form-group">
+                      <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="60" onchange="pizzahotFunc()">
+                        <label class="custom-control-label" for="customRadio1">Vegetarian</label>
+                      </div>
+                      <div class="custom-control custom-radio">
+                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" value="50" onchange="pizzahotFunc()">
+                        <label class="custom-control-label" for="customRadio2">Meat Lovers</label>
+                      </div>
+                      
+                    </div>
+                </fieldset>
+                      <hr>
+
+                      <fieldset>
+                        <legend>Order Pizza Here:</legend>
+                        <h5>What Type of Pizza Would You Like? </h5>
+                        <div class="form-group">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1" name="veg" value="20" onchange="pizzahotFunc()">
+                               <label class="custom-control-label" for="customCheck1">BURGER PIZZA</label>
+                            </div>
+                        </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck2"  value="20" name="veg" onchange="pizzahotFunc()">
+                                <label class="custom-control-label" for="customCheck2">SIDES & BEVERAGES</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck3" value="40" name="veg" onchange="pizzahotFunc()">
+                                <label class="custom-control-label" for="customCheck3">PIZZA MANIA</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck4" value="50" name="veg" onchange="pizzahotFunc()">
+                                <label class="custom-control-label" for="customCheck4">SPECIALITY CHICKEN</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck5" value="45" name="veg" onchange="pizzahotFunc()"> 
+                                <label class="custom-control-label" for="customCheck5">Check this custom checkbox</label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheck6" value="35" name="veg" onchange="pizzahotFunc()">
+                                <label class="custom-control-label" for="customCheck6">SIDES & BEVERAGES</label>
+                                </div>
+                            </div>
+                           
+
+                            <hr>
+                            <h4>Non Vegetarian Pizza </h4>
+                            <div class="form-group">
+                                    <div class="custom-control custom-checkbox">
+                                        <input type="checkbox" class="custom-control-input" id="customCheck8" value="75" name="Nonveg" onchange="pizzahotFunc()">
+                                        <label class="custom-control-label" for="customCheck8">Chicken Golden Delight</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck9" value="55" name="Nonveg" onchange="pizzahotFunc()">
+                                            <label class="custom-control-label" for="customCheck9">Non Veg Supreme</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="customCheck10" value="85" name="Nonveg" onchange="pizzahotFunc()">
+                                                <label class="custom-control-label" for="customCheck10">CHICKEN TIKKA</label>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                                <div class="custom-control custom-checkbox">
+                                                    <input type="checkbox" class="custom-control-input" id="customCheck11" value="45" name="Nonveg" onchange="pizzahotFunc()">
+                                                    <label class="custom-control-label" for="customCheck11">CHICKEN SAUSAGE</label>
+                                                </div>
+                                            </div>
+
+
+                      </fieldset>
+                        <fieldset>
+                            <legend> Total Amout</legend>
+                            <input type="text" readonly class="form-control" id="totalamout" name="totalamount" value="0" />
+                        </fieldset>
+                        
+              </form>
+        </div>
+            
+          </div>
+      </div>
+
+
+
+
+<script>
+    var pizzaType = document.pizza_menu.customRadio;
+    var veg = document.pizza_menu.veg;
+    var Nonveg = document.pizza_menu.Nonveg;
+    var nondata = [];
+    var vegdata = [];
+    for(var j=0; j<Nonveg.length;j++){
+        nondata.push(Nonveg[j].value);
+    }
+    for(var j=0; j<veg.length;j++){
+        vegdata.push(veg[j].value);
+    }
+
+function pizzahotFunc(){
+    
+    var pizzaTypeValue = 0;
+    var pizzaVegValue = 0;
+    var pizzaNonValue = 0;
+for(var i=0; i<pizzaType.length;i++){
+   if(pizzaType[i].checked){
+       pizzaTypeValue += parseFloat(pizzaType[i].value);
+   }
+}
+ for(var v=0;v<veg.length;v++){
+    if(veg[v].checked){
+        pizzaVegValue += parseFloat(veg[v].value);
+    };
+ }
+
+
+ pizza_menu.totalamount.value = pizzaTypeValue + pizzaVegValue;
+
+}
+
+
+
+
+
+</script>
+</body>
+</html>
